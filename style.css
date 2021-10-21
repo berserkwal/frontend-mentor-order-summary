@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --hover-blue: hsl(245, 76%, 68%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: 'Red Hat Display';
+  background: top / contain no-repeat
+    url(./images/pattern-background-desktop.svg) var(--pale-blue);
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.card-body {
+  width: 100%;
+  max-width: 375px;
+  border-radius: 1.25rem;
+  display: grid;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-illustration {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.plan-card,
+.plan-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plan-card {
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--very-pale-blue);
+  border-radius: 0.75rem;
+}
+.plan-info {
+  gap: 1rem;
+  height: 100%;
+}
+.plan-detail {
+  height: 100%;
+  justify-content: space-between;
+  font-size: 1rem;
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+  color: var(--dark-blue);
+}
+
+.plan-price {
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+
+h1 {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+p {
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+}
+.button-change {
+  color: var(--bright-blue);
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.button-change:hover {
+  color: var(--hover-blue);
+  text-decoration: none;
+}
+
+.button-proceed {
+  background-color: var(--bright-blue);
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0px 15px 15px 3px rgba(0, 0, 0, 0.1);
+}
+.button-proceed:hover {
+  background-color: var(--hover-blue);
+}
+
+.button-cancel {
+  color: var(--desaturated-blue);
+  font-weight: 900;
+  font-size: 0.75rem;
+}
+
+.button-cancel:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (min-width: 425px) {
+  .hero-text {
+    padding: 2rem;
+  }
+}
